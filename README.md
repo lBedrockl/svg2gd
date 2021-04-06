@@ -9,7 +9,9 @@ place file in Folder, change name in settings.txt
 use runProgram.bat to convert to a gd img
 
 change the color 10 from red to black(im lazy and idk how to code it)
+and bg to black cause its nice
 
+also you can only use circle setting in geometrize, you will break code, ;-;
 
 This code is based off of colon's mc2gd code and modified to make imgs
 imma just use colon's license
