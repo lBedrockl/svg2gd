@@ -1,3 +1,5 @@
+https://youtu.be/Uc4TwD3Ooi8 If you need my help here is a video
+
 Get node (https://nodejs.org/en/download/)
 Create a SVG file with Geometrize (https://github.com/Tw1ddle/geometrize/releases/download/v1.0.1/geometrize_1.0.1_windows.exe)
 
