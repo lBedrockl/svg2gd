@@ -4,6 +4,7 @@ Create a SVG file with Geometrize (https://github.com/Tw1ddle/geometrize/release
 place file in Folder, change name in settings.txt
 
 HOME/Documents/GitHub/svg2gd/test.svg
+
 HOME/FOLDER/FOLDER/svg2gd/FILENAME.svg
 
 use runProgram.bat to convert to a gd img
