@@ -1,0 +1,18 @@
+
+MC2GD SETTINGS
+
+* Every line in this file that doesn't start with a ">" will be ignored by the code
+* Note that HOME is the same as C:/Users/YourName
+
+==============================================
+
+GD SAVE FILE LOCATION:
+The file where your GD levels are saved (CCLocalLevels.dat)
+
+> HOME/AppData/Local/GeometryDash/CCLocalLevels.dat
+
+==============================================
+
+change the svg file name
+
+> HOME/Desktop/Coding Stuff/svg2gd/test.svg
