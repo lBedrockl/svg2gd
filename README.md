@@ -1,9 +1,11 @@
+https://youtu.be/Uc4TwD3Ooi8 If you need my help here is a video
+
 Get node (https://nodejs.org/en/download/)
 Create a SVG file with Geometrize (https://github.com/Tw1ddle/geometrize/releases/download/v1.0.1/geometrize_1.0.1_windows.exe)
 
 place file in Folder, change name in settings.txt
 
-HOME/Desktop/Coding Stuff/svg2gd/test.svg
+HOME/Documents/GitHub/svg2gd/test.svg
 
 HOME/FOLDER/FOLDER/svg2gd/FILENAME.svg
 
