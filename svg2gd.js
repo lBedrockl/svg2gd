@@ -109,13 +109,16 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
         }
         
         console.log("> Importing to GD...")
-        let desc =`test`
+        let name = svgfile
+        .slice(svgfile.lastIndexOf("/") + 1, svgfile.indexOf(".svg"))
+        .replace(".svg")
+        let desc =`a`
         saveData = saveData.split("<k>_isArr</k><t />")
         saveData[1] = saveData[1].replace(/<k>k_(\d+)<\/k><d><k>kCEK<\/k>/g, function(n) { return "<k>k_" + (Number(n.slice(5).split("<")[0])+1) + "</k><d><k>kCEK</k>" })
         saveData = saveData[0] + "<k>_isArr</k><t />" + leveldata.ham + leveldata.bur + levelStr + leveldata.ger + saveData[1]
         saveData = saveData
-        .replace("[[LEVELNAME]]", "you a bith").replace("[[LEVELDESC]]", desc)
-        .replace("[[BGCOL]]")
+        .replace("[[LEVELNAME]]", name).replace("[[LEVELDESC]]", desc)
+        .replace("[[BGCOL]]", "")//1_255_2_0_3_0 is red bg, leave empty for basic bg color
         .replace("[[OBJECTS]]", objects)
         
         fs.writeFileSync(gdLevels, saveData, 'utf8')
