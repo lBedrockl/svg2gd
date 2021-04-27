@@ -77,7 +77,7 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
     //console.log(list)
     console.log("> Building level...")
 
-    list.forEach(y => {
+    /*list.forEach(y => {
         let pos = [300,200]
         if (y.x) pos[0] += y.x * 1            // X Offset
         if (y.y) pos[1] += (y.y - 128) * -1             // Y Offset
@@ -86,6 +86,23 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
         if (y.flipX) levelStr += `,4,1`     // Flip X
         if (y.flipY) levelStr += `,5,1`     // Flip Y
         if (y.id) levelStr += `,25,${y.id-100}`   // Z Layer
+        if (y.r) levelStr += `,32,${y.r/4}`   // Scale
+        if (y.c) {                          // Color (HSV)
+            if (!Array.isArray(y.c)) levelStr += `,21,10,23,10,41,1,43,${rgb2hsv(y.c)}`
+            else levelStr += `,21,10,22,10,23,10,41,1,42,1,43,${rgb2hsv(y.c[0])},44,${rgb2hsv(y.c[1])}`
+        }
+        levelStr += ";"
+        objects += 1
+    })*/
+    list.forEach(y => {
+        let pos = [300,200]
+        if (y.x) pos[0] += y.x * 1            // X Offset
+        if (y.y) pos[1] += (y.y - 128) * -1             // Y Offset
+        levelStr += `1,${725},2,${pos[0]},3,${pos[1]},57,1`
+        //if (y.r) levelStr += `,6,${y.r}`    // Rotation
+        if (y.flipX) levelStr += `,4,1`     // Flip X
+        if (y.flipY) levelStr += `,5,1`     // Flip Y
+        if (y.id) levelStr += `,25,${-y.r+100}`   // Z Layer //changed to be depented on size
         if (y.r) levelStr += `,32,${y.r/4}`   // Scale
         if (y.c) {                          // Color (HSV)
             if (!Array.isArray(y.c)) levelStr += `,21,10,23,10,41,1,43,${rgb2hsv(y.c)}`
