@@ -1,5 +1,5 @@
 
-MC2GD SETTINGS
+SETTINGS
 
 * Every line in this file that doesn't start with a ">" will be ignored by the code
 * Note that HOME is the same as C:/Users/YourName

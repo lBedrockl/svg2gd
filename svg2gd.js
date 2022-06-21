@@ -58,7 +58,7 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
     console.log("> Parsing svg...")
 
     let list = data.split("\n")
-    .filter(x => x.match("circle"))
+    .filter(x => x.match("circle")) //do i even need this?
     .map(x => 
         ({
         circle: "circle",
@@ -98,7 +98,7 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
         let pos = [300,200]
         if (y.x) pos[0] += y.x * 1            // X Offset
         if (y.y) pos[1] += (y.y - 128) * -1             // Y Offset
-        levelStr += `1,${725},2,${pos[0]},3,${pos[1]},57,1`
+        levelStr += `1,${725},2,${pos[0]},3,${pos[1]}` // ,57,1 is group ids
         //if (y.r) levelStr += `,6,${y.r}`    // Rotation
         if (y.flipX) levelStr += `,4,1`     // Flip X
         if (y.flipY) levelStr += `,5,1`     // Flip Y
