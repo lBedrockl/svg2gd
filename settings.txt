@@ -15,4 +15,4 @@ The file where your GD levels are saved (CCLocalLevels.dat)
 
 change the svg file name
 
-> HOME/Documents/GitHub/svg2gd/test.svg
+> HOME/Documents/GitHub/svg2gd/duck.svg

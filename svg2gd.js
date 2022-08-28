@@ -102,7 +102,7 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
         //if (y.r) levelStr += `,6,${y.r}`    // Rotation
         if (y.flipX) levelStr += `,4,1`     // Flip X
         if (y.flipY) levelStr += `,5,1`     // Flip Y
-        if (y.id) levelStr += `,25,${-y.r+100}`   // Z Layer //changed to be depented on size
+        if (y.id) levelStr += `,25,${y.id - 100}`   // Z Layer //changed to be depented on size
         if (y.r) levelStr += `,32,${y.r/4}`   // Scale
         if (y.c) {                          // Color (HSV)
             if (!Array.isArray(y.c)) levelStr += `,21,10,23,10,41,1,43,${rgb2hsv(y.c)}`
