@@ -11,6 +11,7 @@ console.log()   // Blank line for neatness
 
 let missing = []
 
+
 function rgb2hsv (val) {
     var computedH = 0;
     var computedS = 0;
@@ -31,9 +32,9 @@ function rgb2hsv (val) {
     var maxRGB = Math.max(r,Math.max(g,b));
    
     // Black-gray-white
-    if (minRGB==maxRGB) {
+    if (minRGB == maxRGB) {
      computedV = minRGB;
-     return [0,0,computedV];
+     return `${0}a${0}a${computedV}a1a1`;//this was the fix 💀
     }
    
     // Colors other than black-gray-white:
@@ -102,7 +103,7 @@ fs.readFile(svgfile, 'utf8', function(err, data) {
         //if (y.r) levelStr += `,6,${y.r}`    // Rotation
         if (y.flipX) levelStr += `,4,1`     // Flip X
         if (y.flipY) levelStr += `,5,1`     // Flip Y
-        if (y.id) levelStr += `,25,${y.id - 100}`   // Z Layer //changed to be depented on size
+        if (y.id) levelStr += `,25,${y.id - 500}`   // Z Layer //changed to be depented on size
         if (y.r) levelStr += `,32,${y.r/4}`   // Scale
         if (y.c) {                          // Color (HSV)
             if (!Array.isArray(y.c)) levelStr += `,21,10,23,10,41,1,43,${rgb2hsv(y.c)}`
